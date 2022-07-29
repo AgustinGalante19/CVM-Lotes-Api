@@ -16,7 +16,7 @@ class main {
     }
     config() {
         this.app.use((0, cors_1.default)());
-        this.app.set("port", process.env.PORT || 6969);
+        this.app.set("port", process.env.PORT || 7575);
         this.app.use(express_1.default.json());
         this.app.use(express_1.default.urlencoded({ extended: false }));
     }
