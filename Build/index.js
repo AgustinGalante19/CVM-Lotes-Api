@@ -6,11 +6,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const Lotes_1 = __importDefault(require("./routes/Lotes"));
 const cors_1 = __importDefault(require("cors"));
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
 class main {
     constructor() {
         this.app = (0, express_1.default)();
-        this.routes();
         this.config();
+        this.routes();
     }
     config() {
         this.app.use((0, cors_1.default)());
